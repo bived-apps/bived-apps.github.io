@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bive: agents write, you decide</title>
+  <meta name="description" content="Bive is a template where agents write and you decide: an owner, an advisor, a coordinator and delegates work in clear roles around one person.">
+  <meta property="og:title" content="Bive: agents write, you decide">
+  <meta property="og:description" content="Agents write, you decide. A simple way to work with an owner, an advisor, a coordinator and delegates.">
+  <meta property="og:image" content="https://bived-apps.github.io/assets/social-card.png">
+  <link rel="icon" href="assets/icon-d.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --cream: #F7F5F0;
+      --white: #FFFFFF;
+      --ink: #1F2430;
+      --muted: #5B6270;
+      --owner: #B8860B;
+      --advisor: #0F766E;
+      --coordinator: #B45309;
+      --delegate: #6D28D9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--ink);
+      background: var(--cream);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+    header, section, footer { margin-bottom: 64px; }
+    header { text-align: center; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 24px 0 16px; font-weight: 600; }
+    h2 { font-size: 24px; line-height: 1.25; margin: 0 0 24px; font-weight: 600; }
+    p { margin: 0 0 16px; }
+    .tagline { font-size: 24px; color: var(--muted); margin: 0 0 24px; }
+    .wordmark { height: 120px; width: auto; max-width: 100%; }
+    .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--ink);
+    }
+    .button.primary { background: var(--ink); color: var(--white); }
+    .button.secondary { background: var(--white); color: var(--ink); }
+    .roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .role {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .role img { width: 24px; height: 24px; display: block; margin-bottom: 16px; }
+    .role h3 { font-size: 16px; margin: 0 0 8px; font-weight: 600; }
+    .role.owner h3 { color: var(--owner); }
+    .role.advisor h3 { color: var(--advisor); }
+    .role.coordinator h3 { color: var(--coordinator); }
+    .role.delegate h3 { color: var(--delegate); }
+    .role p { margin: 0; color: var(--muted); }
+    .flower-block { text-align: center; }
+    .flower { width: 240px; max-width: 100%; height: auto; display: block; margin: 0 auto 16px; }
+    .flower-block p { color: var(--muted); }
+    .around ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+    .around li { background: var(--white); border-radius: 8px; padding: 24px; }
+    .around a { color: var(--ink); font-weight: 600; }
+    .around span { display: block; color: var(--muted); margin-top: 8px; }
+    footer {
+      border-top: 1px solid #E2DED6;
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer a { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="wordmark" src="assets/wordmark.svg" alt="Bive">
+      <p class="tagline">Agents write, you decide.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/bived-apps/bive/generate">Use the template</a>
+        <a class="button secondary" href="https://github.com/bived-apps/bive#readme">Read the README</a>
+      </div>
+    </header>
+
+    <section aria-labelledby="roles-title">
+      <h2 id="roles-title">The four roles</h2>
+      <div class="roles">
+        <article class="role owner">
+          <img src="assets/role-owner.svg" alt="">
+          <h3>Owner</h3>
+          <p>Decides gates and merges.</p>
+        </article>
+        <article class="role advisor">
+          <img src="assets/role-advisor.svg" alt="">
+          <h3>Advisor</h3>
+          <p>Answers read-only, then stops.</p>
+        </article>
+        <article class="role coordinator">
+          <img src="assets/role-coordinator.svg" alt="">
+          <h3>Coordinator</h3>
+          <p>Splits, briefs and reviews, never merges.</p>
+        </article>
+        <article class="role delegate">
+          <img src="assets/role-delegate.svg" alt="">
+          <h3>Delegate</h3>
+          <p>One issue in its own worktree, then stops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="flower-block" aria-label="Maren among the roles">
+      <img class="flower" src="assets/flower.png" alt="Maren, a flower among the four role figures" width="240">
+      <p>Everyone works around the one who decides.</p>
+    </section>
+
+    <section class="around" aria-labelledby="around-title">
+      <h2 id="around-title">Around Bive</h2>
+      <ul>
+        <li>
+          <a href="https://bived-apps.github.io/registry/">Registry</a>
+          <span>A public record of projects and work made with Bive.</span>
+        </li>
+        <li>
+          <a href="https://github.com/bived-apps/bench">Bench</a>
+          <span>Benchmarks for agents and models in Bive projects.</span>
+        </li>
+        <li>
+          <a href="https://github.com/bived-apps/university">University</a>
+          <span>Guides and learning material for working with Bive.</span>
+        </li>
+        <li>
+          <a href="https://github.com/bived-apps/workspace-template">Workspace template</a>
+          <span>A ready-to-use workspace for starting a project with Bive.</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>MIT licence</span>
+      <a href="https://github.com/bived-apps/bive/releases/latest">Latest release</a>
+    </footer>
+  </main>
+</body>
+</html>
